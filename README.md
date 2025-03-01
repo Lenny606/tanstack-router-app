@@ -1,6 +1,9 @@
 Welcome to your new TanStack app! 
 
-# Getting Started
+# Install
+```bash
+pnpm create-tsrouter-app .
+```
 
 To run this application:
 
