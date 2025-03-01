@@ -28,24 +28,65 @@ const Homepage = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <Link to="/services/one" className="block">
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-semibold mb-3">Service One</h3>
-                <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <Link 
+              to="/services/one" 
+              className="block transform transition-all duration-300 hover:-translate-y-2"
+            >
+              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-2xl transition-all duration-300 group">
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-blue-600 transition-colors">
+                  Service One
+                </h3>
+                <p className="text-gray-600 group-hover:text-gray-900 transition-colors">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <div className="mt-4 flex items-center text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span>Learn more</span>
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
             </Link>
+
             {/* Card 2 */}
-            <Link to="/services/two" className="block">
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-semibold mb-3">Service Two</h3>
-                <p className="text-gray-600">Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+            <Link 
+              to="/services/two" 
+              className="block transform transition-all duration-300 hover:-translate-y-2"
+            >
+              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-2xl transition-all duration-300 group">
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-blue-600 transition-colors">
+                  Service Two
+                </h3>
+                <p className="text-gray-600 group-hover:text-gray-900 transition-colors">
+                  Sed do eiusmod tempor incididunt ut labore et dolore.
+                </p>
+                <div className="mt-4 flex items-center text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span>Learn more</span>
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
             </Link>
+
             {/* Card 3 */}
-            <Link to="/services/three" className="block">
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-semibold mb-3">Service Three</h3>
-                <p className="text-gray-600">Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <Link 
+              to="/services/three" 
+              className="block transform transition-all duration-300 hover:-translate-y-2"
+            >
+              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-2xl transition-all duration-300 group">
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-blue-600 transition-colors">
+                  Service Three
+                </h3>
+                <p className="text-gray-600 group-hover:text-gray-900 transition-colors">
+                  Ut enim ad minim veniam, quis nostrud exercitation.
+                </p>
+                <div className="mt-4 flex items-center text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span>Learn more</span>
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
             </Link>
           </div>
