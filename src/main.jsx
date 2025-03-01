@@ -9,12 +9,14 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
-
 import "./styles.css";
 import reportWebVitals from "./reportWebVitals.js";
 
 import App from "./App.jsx";
 import About from "./pages/About.jsx";
+import ServiceOne from "./pages/services/ServiceOne";
+import ServiceTwo from "./pages/services/ServiceTwo";
+import ServiceThree from "./pages/services/ServiceThree";
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -40,7 +42,31 @@ const aboutRoute = createRoute({
   component: About,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, aboutRoute]);
+const serviceOneRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/services/one",
+  component: ServiceOne,
+});
+
+const serviceTwoRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/services/two",
+  component: ServiceTwo,
+});
+
+const serviceThreeRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/services/three",
+  component: ServiceThree,
+});
+
+const routeTree = rootRoute.addChildren([
+  indexRoute, 
+  aboutRoute, 
+  serviceOneRoute, 
+  serviceTwoRoute, 
+  serviceThreeRoute
+]);
 
 const router = createRouter({
   routeTree,

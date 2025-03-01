@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@tanstack/react-router';
 
 const Homepage = () => {
   return (
@@ -16,7 +17,7 @@ const Homepage = () => {
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center text-white px-4">
             <h1 className="text-5xl font-bold mb-4">Welcome to Our Website</h1>
-            <p className="text-xl text-500-red">Discover amazing possibilities</p>
+            <p className="text-xl">Discover amazing possibilities</p>
           </div>
         </div>
       </section>
@@ -27,20 +28,26 @@ const Homepage = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-semibold mb-3">Service One</h3>
-              <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
+            <Link to="/services/one" className="block">
+              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold mb-3">Service One</h3>
+                <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </Link>
             {/* Card 2 */}
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-semibold mb-3">Service Two</h3>
-              <p className="text-gray-600">Sed do eiusmod tempor incididunt ut labore et dolore.</p>
-            </div>
+            <Link to="/services/two" className="block">
+              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold mb-3">Service Two</h3>
+                <p className="text-gray-600">Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              </div>
+            </Link>
             {/* Card 3 */}
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-semibold mb-3">Service Three</h3>
-              <p className="text-gray-600">Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            </div>
+            <Link to="/services/three" className="block">
+              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
+                <h3 className="text-xl font-semibold mb-3">Service Three</h3>
+                <p className="text-gray-600">Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
