@@ -13,29 +13,22 @@ import "./styles.css";
 import reportWebVitals from "./reportWebVitals.js";
 
 import App from "./App.jsx";
+import Homepage from "./pages/Homepage";
 import About from "./pages/About.jsx";
 import ServiceOne from "./pages/services/ServiceOne";
 import ServiceTwo from "./pages/services/ServiceTwo";
 import ServiceThree from "./pages/services/ServiceThree";
 
 const rootRoute = createRootRoute({
-  component: () => (
-    <>
-    
-    
-      <Outlet />
-      <TanStackRouterDevtools />
-      
-    
-    </>
-  ),
+  component: App,
 });
 
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
-  component: App,
+  component: Homepage,
 });
+
 const aboutRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/about",
@@ -61,18 +54,16 @@ const serviceThreeRoute = createRoute({
 });
 
 const routeTree = rootRoute.addChildren([
-  indexRoute, 
-  aboutRoute, 
-  serviceOneRoute, 
-  serviceTwoRoute, 
-  serviceThreeRoute
+  indexRoute,
+  aboutRoute,
+  serviceOneRoute,
+  serviceTwoRoute,
+  serviceThreeRoute,
 ]);
 
 const router = createRouter({
   routeTree,
   defaultPreload: "intent",
-  scrollRestoration: true,
-  defaultStructuralSharing: true,
 });
 
 const rootElement = document.getElementById("app");

@@ -1,10 +1,14 @@
 import "./App.css";
-import Homepage from "./pages/Homepage";
+import Navigation from "./components/Navigation";
+import { Outlet } from "@tanstack/react-router";
 
 function App() {
   return (
     <div className="app">
-      <Homepage />
+      <Navigation />
+      <main className="pt-16"> {/* Add padding-top to account for fixed navbar */}
+        <Outlet />
+      </main>
     </div>
   );
 }
