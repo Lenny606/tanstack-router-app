@@ -1,7 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from '@tanstack/react-router';
 
 const Homepage = () => {
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const handleClick = () => {
+      console.log("clicked");
+    }
+
+    document.addEventListener("click", handleClick, { signal: controller.signal });
+
+    return () => {
+      controller.abort();
+    }
+  },[])
+  useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+    const signalAbort = AbortSignal.timeout(1000);
+    const signalAny = AbortSignal.any([signal, signalAbort]);
+    const handleClick = () => {
+      console.log("clicked");
+    }
+
+    document.addEventListener("click", handleClick, { signal });
+    document.addEventListener("click1", handleClick, { signal });
+    document.addEventListener("click2", handleClick, { signal });
+    document.addEventListener("click3", handleClick, { signal });
+
+    return () => {
+      controller.abort();
+    }
+  },[])
+
+
+
   return (
     <div className="min-h-screen">
       {/* Hero Section with Main Image */}
